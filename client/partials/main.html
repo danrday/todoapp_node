@@ -1,0 +1,20 @@
+<h1>{{title}}</h1>
+
+<!-- <h3>{{data}}<h3> -->
+
+<h3 ng-repeat="todo in data">
+<div class='task'>{{todo.content}}
+  <a class="btn btn-primary" href="/#/chat">Done</a>
+  <a class="btn btn-primary" href="/#/chat">Edit</a>
+  <a class="btn btn-primary" href="/#/chat">Delete</a>
+</div>
+</h3>
+
+
+
+<form ng-submit="newTask()">
+  <input type="text" ng-model="task" placeholder="Hello Friends!" />
+  <input type="submit" />
+</form>
+
+<!-- <a class="btn btn-primary" href="/#/newtask">Add a to do item.</a> -->
