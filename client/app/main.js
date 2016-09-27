@@ -17,7 +17,10 @@ angular
 
     $http
         .post('/api/todo', newtask)
-        .then(() => $scope.data.push(newtask))
+        .then((res) => {
+          $scope.data.push(res.data)
+          console.log("DATA:", res.data)
+        })
         .catch(console.error)
     }
 
